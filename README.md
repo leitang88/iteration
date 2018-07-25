@@ -9,4 +9,10 @@
 
 4. git命令: git commit -m "wrote a readme file"
 
-5.  
+5. git命令: git status
+
+6. git命令: git diff
+
+7. git命令: git log --pretty=oneline
+
+8. git命令: 
