@@ -77,6 +77,41 @@ git checkout -- novel.txt
 
 git remote add origin git@github.com:xiaoL/novel.git
 
+然后向网站账户上传小说文件
+
+git push [-u] origin master
+
+小L无意间发现在网站的某个角落有一本他还没写完的小说, 他决定把这个坑填上, 于是他先把这个网上的小说版本下载到自己的电脑中:
+
+git clone git@github.com:xiaoL/oldnovel.git
+
+于是, 他看到了一个名字时oldnovel的文件夹(仓库)
+
+小L的小说是有许多支线剧情, 他在写主线剧情的同时, 也会抽时间写支线剧情, 两者互不影响, 只有等时机成熟了, 小L才会将支线剧情合并到主线上去(此段与实际不符, 理解大概意思即可)
+
+有时候小L会把大纲一类的文件也放在仓库里, 但上传的时候肯定不需要上传大纲, 因此就有了这样一个忽略更新/提交/上传的隐藏文件:
+
+.gitignore
+
+并在里面写上一些可以定位相关文件的东西, 比如:
+
+*.docx
+*.egg
+*.db
+等等
+
+怎样检验是否有效果呢?
+
+git status
+
+若显示: working directory clean 则表示生效
+
+有时候小L发现自己写的文件无法提交上传, 就有可能是.gitignore造成的, 此时我们需要核实:
+
+git check-ignore -v hello.docx
+
+此时的小L已经可以挺好的使用git提高他的工作效率, 但这些命令可能不到总命令数的20%, 因此, 需要在使用过程中不断学习和摸索才行呀!
+
 
 
 
